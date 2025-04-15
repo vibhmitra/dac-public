@@ -1,0 +1,25 @@
+﻿@model List<ModelBinding.Models.Product>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Product Details</h1>
+<a href="@Url.Action("Create","Product")" class="btn btn-outline-primary p-2">Create Product</a>
+
+<table class="table table-bordered table-striped">
+    <thead>
+    <th>Product Id</th>
+    <th>Product Name</th>
+    <th>Product Rate</th>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ProductID</td>
+                <td>@item.ProductName</td>
+                <td>@item.Rate</td>
+            </tr>
+        }
+    </tbody>
+</table>

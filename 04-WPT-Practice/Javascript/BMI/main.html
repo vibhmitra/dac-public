@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>BMI Calculator</title>
+
+    <style>
+        body {
+            text-align: center;
+            padding: 20px 30%;
+        }
+
+        form {
+            background-color: rgb(210, 255, 229);
+            padding: 10px;
+            border-radius: 40px;
+        }
+
+        #result {
+            background-color: rgb(221, 220, 221);
+            margin: 10px auto;
+            font-size: x-large;
+        }
+
+        #result:hover {
+            background-color: beige;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>BMI 👩‍⚕️ Calc</h2>
+        <form>
+            <div class="form-group">
+                <label for="height">Weight:</label>
+                <input type="text" class="form-control" id="weight" placeholder="Enter Weight (in kg)" name="weight"
+                    value="" autocomplete="false">
+            </div>
+            <div class="form-group">
+                <label for="weight">Height:</label>
+                <input type="text" class="form-control" id="height" placeholder="Enter Height (in cm)" name="height"
+                    value="">
+            </div>
+
+            <button type="button" class="btn btn-default" onclick="CalBMI()">Calculate BMI</button>
+        </form>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function CalBMI() {
+            var h = parseFloat(document.getElementById('height').value);
+            var w = parseFloat(document.getElementById('weight').value);
+            console.log(h);
+            var BMI = (w / (h * h)) * 10000;
+            if (BMI >= 18.5 && BMI <= 25.0) {
+                // normal
+                document.getElementById('result').style.color = "green";
+            } else if (BMI < 18.5) {
+                // under weight
+                document.getElementById('result').style.color = "Blue";
+            } else if (BMI > 25.0 && BMI <= 30) {
+                // overweight
+                document.getElementById('result').style.color = "Orange";
+            } else {
+                // obese
+                document.getElementById('result').style.color = "red";
+            }
+            document.getElementById('result').innerHTML = BMI.toFixed(2);
+        }
+    </script>
+</body>
+
+</html>

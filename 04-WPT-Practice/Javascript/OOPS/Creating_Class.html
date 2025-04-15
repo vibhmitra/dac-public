@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Class</title>
+</head>
+
+<body>
+    <script>
+        class Cars {
+            // constructor of Class
+            constructor(name, maker, price) {
+                this.name = name;
+                this.maker = maker;
+                this.price = price;
+            }
+
+            getDetails() {
+                return `The name of car is ${this.name}`;
+            }
+
+        }
+
+        // creating an object
+        let car1 = new Cars("A6", "Audi", "$899K");
+        let car2 = new Cars("ACE", "Tata", "$29K");
+
+        document.write(car1.name + "<br>" + car1.maker + "<br>" + car1.price + "<br>");
+        document.write(car1.getDetails());
+    </script>
+</body>
+
+</html>

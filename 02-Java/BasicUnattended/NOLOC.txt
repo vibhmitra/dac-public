@@ -1,0 +1,41 @@
+package cdac.assignments.one;
+import java.util.Scanner;
+
+public class Prob7 {
+
+	public enum TemperatureType { TO_CELCIUS, TO_FAHRENHEIT }
+	
+	static double temperatureConversion (TemperatureType tempType, double temperature) {
+		switch (tempType) {
+			case TO_CELCIUS:
+				return (1);
+			case TO_FAHRENHEIT:
+				return (2);
+			default:
+				return (0);
+		}	
+	}
+	
+	public static void main(String[] args) {
+
+		double temperature;
+		int userChoice;
+		TemperatureType type;
+		Scanner getInput = new Scanner(System.in);
+		
+		System.out.println("< TEMPERATURE CONVERTOR > ");
+		System.out.println("[1] FAHRENHEIT -> CELCIUS");
+		System.out.println("[2] CELCIUS -> FAHRENHEIT");
+		
+		userChoice = getInput.nextInt();
+		type = TemperatureType.values()[userChoice - 1];
+
+		temperature = getInput.nextDouble();
+		
+		System.out.println(temperatureConversion(type, temperature));
+		
+		getInput.close();
+		
+	}
+
+}

@@ -1,0 +1,100 @@
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: rgb(247, 251, 255);
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+}
+
+/* apply css for ul tag section  */
+header ul {
+  list-style-type: none;
+  display: flex;
+  padding: 0px;
+  margin: 0px;
+}
+
+header a {
+  color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo {
+  margin: 0 auto;
+  font-size: 20px;
+}
+
+.menu li {
+  padding: 10px;
+  background-color: rgb(224, 239, 253);
+}
+.socailLinks {
+  padding: 20px;
+}
+
+.socailLinks img {
+  width: 30px;
+  margin-right: 15px;
+}
+
+/* Main Body */
+
+#main {
+  display: flex;
+}
+
+aside {
+  flex: 0 0 vw;
+  background-color: rgb(252, 252, 252);
+  padding: 10px 20px;
+}
+
+aside ul {
+  list-style: none;
+}
+
+aside ul a {
+  text-decoration: none;
+  color: rgb(60, 125, 151);
+  padding: 2px;
+  display: block;
+}
+
+aside h3 {
+  text-align: center;
+}
+
+iframe {
+  width: 100%;
+  height: 400px;
+  overflow: visible;
+  border: 1px dashed rgb(221, 224, 224);
+  border-radius: 10px;
+}
+
+.right_aside_menu {
+  margin: 0 auto;
+  text-align: right;
+}
+
+.left_aside_menu {
+  margin: 0 auto;
+  text-align: left;
+}
+
+footer {
+  background-color: rgb(237, 255, 209);
+  padding: 15px;
+  text-align: center;
+}

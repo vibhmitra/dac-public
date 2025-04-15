@@ -1,0 +1,4 @@
+Log to the File! 🖥 -> DB insertion is running! @
+Log to the File! 🖥 -> Record got inserted.
+Log to the File! 🖥 -> DB insertion is running! @
+Log to the File! 🖥 -> Record got inserted.

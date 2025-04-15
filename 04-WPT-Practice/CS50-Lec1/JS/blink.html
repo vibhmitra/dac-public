@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <script>
+
+        function blink() {
+            let body = document.querySelector('body');
+            if (body.style.visibility == 'hidden') {
+                body.style.visibility = 'visible';
+            }
+            else {
+                body.style.visibility = 'hidden';
+            }
+        }
+
+        // blink every 300ms
+        window.setInterval(blink, 300);
+
+    </script>
+    <title>Blink</title>
+</head>
+
+<body>
+    Hello, Vibh! 😀
+</body>
+
+</html>

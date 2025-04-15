@@ -1,0 +1,48 @@
+body {
+    background-color: #ece9f0;
+}
+
+nav {
+    background-color: #563d7c;
+    color: white;
+    padding: 30px 70px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+nav ul {
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    text-transform: capitalize ;
+}
+
+nav ul li a {
+    color: rgb(255, 255, 255) !important;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+
+/** Added by me just a test*/
+
+#jumbo {
+    background-color: rgb(255, 217, 0) !important;
+}
+
+.btn-primary { 
+    background-color: #563d7c !important;
+    border-color: #563d7c !important;
+}
+
+.btn-primary:hover { 
+    background-color: #6f519c !important;
+    border-color: #563d7c !important;
+}
+
+.btn-lg:active {
+    transform: translateY(1px) !important;
+}

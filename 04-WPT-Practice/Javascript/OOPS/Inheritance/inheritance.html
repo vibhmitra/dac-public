@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance</title>
+</head>
+
+<body>
+    <script>
+        class Shape {
+            constructor(color) {
+                this.color = color;
+            }
+
+            CalArea() {
+                return 0;
+            }
+        }
+
+        // inheritance
+        class Circle extends Shape {
+
+            constructor(radius, color) {
+                super(color);   // super class constructor invoked
+                this.radius = radius;
+            }
+
+            // overriding super class method
+            CalArea() {
+                return Math.PI * this.radius * this.radius;
+            }
+        }
+
+        // square class
+        class Square extends Shape {
+            constructor(side, color) {
+                super(color);
+                this.side = side;
+            }
+
+            // overriding super class method
+            CalArea() {
+                return this.side ** 2; // sqauring in js
+            }
+        }
+
+        // creating instances / obejcts
+        const circle1 = new Circle(3, "Red");
+        const square1 = new Square(7, "Blue");
+
+        document.write("Circle Area: " + circle1.CalArea().toFixed(2) + "<br>");
+        document.write("Square Area: " + square1.CalArea().toFixed(2));
+
+
+    </script>
+</body>
+
+</html>

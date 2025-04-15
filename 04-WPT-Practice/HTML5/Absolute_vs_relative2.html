@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absolute_vs_relative2</title>
+    <style>
+        #left-panel {
+            border: 1px solid black;
+            position: absolute;
+            top:10px;
+            left:10px;
+            width: 200px;
+            height: 1000px;
+            background-color: antiquewhite;
+            z-index: -1;
+        }
+
+        #right-panel{
+            border: 1px solid black;
+            position: absolute;
+            top:10px;
+            left:210px;
+            width: 200px;
+            height:1000px;
+            background-color: rgb(209, 183, 148);
+            z-index: 0;
+        }
+        #main-panel {
+            border: 1px solid black;
+            position: fixed;
+            top:200px;
+            left:100px;
+            width: 200px;
+            height: 100px;
+            background-color: rgb(206, 180, 156);
+        }
+
+        #para {
+
+        }
+
+    </style>
+</head>
+<body>
+    <div id="left-panel">Left Panel</div>
+    <div id="right-panel">Right Panel</div>
+    <div id="main-panel">Fixed-Panel</div>
+    <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat fugiat cupiditate, officia sint nobis itaque qui assumenda pariatur, sit, beatae deserunt perferendis eum harum tenetur ducimus velit consequatur quibusdam obcaecati unde quo quasi consectetur nostrum dignissimos impedit. Rerum officiis enim quidem porro veniam, eligendi facere magnam quibusdam possimus sapiente sequi, reiciendis fugit tempora soluta accusantium odit nihil, fuga ratione esse maxime! Enim, quis laboriosam incidunt est dignissimos minus ullam hic, at possimus consectetur a ipsum doloribus! Tempora, vitae consequuntur perferendis cum at eos sint enim deserunt optio ipsum. Mollitia voluptatibus quasi nostrum quo consectetur, aliquam nulla voluptate eum repellendus tempore blanditiis maiores expedita dignissimos libero qui accusamus excepturi similique natus deserunt. Repudiandae ipsam fugit omnis voluptatibus consequuntur, provident amet aliquid non! Magnam, porro optio. Consequuntur praesentium recusandae molestiae est tempora? Illum deserunt fugit eaque voluptatibus quos aliquam ipsum veniam a eveniet soluta natus itaque reiciendis ab corrupti asperiores, dicta repellendus sunt perspiciatis. Laboriosam ab ipsam omnis, provident quia pariatur ipsa corporis esse odio dolore harum sapiente nostrum eligendi facilis quam labore, id dolor possimus voluptates et delectus expedita. Recusandae ad possimus impedit ipsa illo inventore laudantium. Totam aut recusandae vero reprehenderit, pariatur repellat corrupti beatae voluptatibus quia minus, id inventore.</p>
+
+</body>
+</html>

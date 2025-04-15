@@ -1,0 +1,109 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Student View</title>
+    <link href="~/lib/twitter-bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <!--Navbar -->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Logo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!--Links -->
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/products">Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    @{
+        string studentResult;
+        if (ViewBag.Marks >= 50)
+        {
+            studentResult = "Passed :)";
+        }
+        else
+        {
+            studentResult = "Failed :(";
+        }
+    }
+
+    <!--Table-->
+    <div class="container-fluid">
+        <div class="mt-4 p-5 rounded">
+            <h1>Student Details</h1>
+            <p>Welcome to Home Page</p>
+            <table class="table table-striped">
+                <tr>
+                    <td>Student ID</td>
+                    <td>@ViewBag.StudentId</td>
+                </tr>
+                <tr>
+                    <td>Student Name</td>
+                    <td>@ViewBag.StudentName</td>
+                </tr>
+                <tr>
+                    <td>Student Marks</td>
+                    <td>@ViewBag.Marks</td>
+                </tr>
+
+                <tr>
+                    <td>Result</td>
+                    <td>
+                    @if(studentResult == "Passed :)")
+                    {
+                        <span class="">Cogratulations Bro You Are Passed! 😀</span>
+                    }
+                    else
+                    {
+                        <span class=""> Bro You Are Failed! Boooo!! 😂</span>
+                    }
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>No Of Semester</td>
+                    <td>
+                        @for(int i = 1; i <= ViewBag.NoOfSemester; ++i)
+                        {
+                            <span class="text-dark"># @i</span>
+                        }
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Subjects</td>
+                    <td>
+                        @foreach (var subjects in ViewBag.Subjects)
+                        {
+                            <span class="text-dark">@subjects</span>
+                        }
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

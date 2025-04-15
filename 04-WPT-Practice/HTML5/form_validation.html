@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+
+    <style>
+
+        input[type="text"] {
+            text-decoration: none;
+            padding: 5px;
+            margin: 0rem 1rem;
+        }
+
+        input[type="text"]:valid{
+            outline: 2px solid rgb(114, 185, 67);
+            outline-offset: 2px;
+        }
+        
+        input[type="text"]:invalid{
+            outline: 2px solid rgb(233, 81, 81);
+            outline-style: dashed;
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <label for="name">Name : </label>
+        <input type="text" name="UserName" id="name" placeholder="Enter Your Name" required>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

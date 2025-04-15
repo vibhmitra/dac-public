@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+</head>
+
+<body>
+    <h1>This is About AJAX XMLHttpRequest Method</h1>
+
+    <p id="para1">This is Paragrph</p>
+    <button type="button" onclick="getDataFromServer()">Get Data</button>
+
+    <script>
+        function getDataFromServer() {
+            var obj = new XMLHttpRequest();
+            obj.open("GET", "./data.txt", false);
+            obj.send();
+            document.getElementById("para1").innerHTML = obj.responseText;
+        }
+    </script>
+</body>
+
+</html>

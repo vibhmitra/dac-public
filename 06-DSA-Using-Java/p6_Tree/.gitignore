@@ -1,0 +1,7 @@
+.classpath
+.project
+.settings/
+**/bin/*
+
+# Ignore all files ending in .settings within subdirectories
+**/.settings/*

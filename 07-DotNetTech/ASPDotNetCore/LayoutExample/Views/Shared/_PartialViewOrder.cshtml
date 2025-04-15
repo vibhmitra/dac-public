@@ -1,0 +1,12 @@
+﻿<div>
+    <h3>@ViewBag.OrderList</h3>
+    <ol class="list-group list-group-numbered">
+        @for (int i = 0; i < ViewBag.Items.Count; i++)
+        {
+            <li class="list-group-item fw-bold">
+                @ViewBag.Items[i]
+                <span class="badge bg-warning rounded-pill">@((Math.Abs(Guid.NewGuid().GetHashCode()) % 15)+1)</span>
+            </li>
+        }
+    </ol>
+</div>

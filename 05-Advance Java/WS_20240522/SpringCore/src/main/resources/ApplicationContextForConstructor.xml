@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="ad1" class="com.cdac.constructor_inj.Address">
+		<constructor-arg value="A City"></constructor-arg>
+		<constructor-arg value="A State"></constructor-arg>
+		<constructor-arg value="A Country"></constructor-arg>
+	</bean>
+	
+	<bean id="ad2" class="com.cdac.constructor_inj.Address">
+		<constructor-arg value="B City"></constructor-arg>
+		<constructor-arg value="B State"></constructor-arg>
+		<constructor-arg value="B Country"></constructor-arg>
+	</bean>
+	
+	<bean id="em1" class="com.cdac.constructor_inj.Employee">
+		<constructor-arg value="101"></constructor-arg>
+		<constructor-arg value="Ren"></constructor-arg>
+		<constructor-arg ref="ad1"></constructor-arg>
+	</bean>
+	
+	<bean id="em2" class="com.cdac.constructor_inj.Employee">
+		<constructor-arg value="102"></constructor-arg>
+		<constructor-arg value="Moz"></constructor-arg>
+		<constructor-arg ref="ad2"></constructor-arg>
+	</bean>
+	
+
+</beans>

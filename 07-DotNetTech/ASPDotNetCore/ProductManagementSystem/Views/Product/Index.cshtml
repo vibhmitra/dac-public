@@ -1,0 +1,72 @@
+﻿@model IEnumerable<Product> // 👈 This shows that this View Accepts Generics type Product
+@{
+    ViewData["Title"] = "Index";
+}
+
+@* Manual Way of Creating a Toast Notification USING TempData*@
+ @* @if(TempData["success"] != null)
+ {
+     <h4 class="text-bg-success">@TempData["success"]</h4>
+ } *@
+
+ <!-- Calling Partial View for Notification -->
+ <partial name="_NotificationPartialView"></partial>
+ 
+ <!-- Search Field -->
+ <form class="d-flex col-3 pt-3" action="/Product/filter">
+
+     <input class="form-control me-3" type="text" placeholder="Search" value="@ViewBag.SearchKey" id="search" name="search"/>
+     <button class="btn btn-primary">Search</button>
+ </form>
+
+ <!-- Main Content -->
+<form class="Container p-3">
+    <div>
+        <h1>Product Details</h1>
+    </div>
+    <table class="table table-bordered table-striped">
+        <thead class="table-primary text-white">
+            <th>
+                Product Id
+            </th>
+            <th>
+                Product Name
+            </th>
+            <th>
+                Product Price
+            </th>
+            <th>
+                Product Quantity
+            </th>
+            <th colspan="2" class="text-center">
+                Edit/Delete
+            </th>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.ProductId</td>
+                    <td>@item.ProductName</td>
+                    <td>@item.Price</td>
+                    <td>@item.Quantity</td>
+
+                    <td>
+                        <div class="text-center">
+                            <a asp-action="EditProduct" asp-controller="Product" asp-route-id="@item.ProductId" class="btn btn-primary"><span class="fa fa-edit"></span> Edit</a>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="text-center">
+                            <a asp-action="DeleteProduct" asp-controller="Product" class="btn btn-danger" asp-route-id="@item.ProductId"><span class="fa fa-trash"></span> Delete</a>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div class="text-center">
+        <a asp-controller="Product" asp-action="AddProduct" class="btn btn-primary"><span class="fa fa-solid fa-plus"></span> Add Product</a>
+    </div>
+
+</form>

@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1710763074 source:d:\cdac\curriculum\2-practice\c++\20240318\16-filehandling\bankapp\bankapp\src\bankapp.cpp
+	<iostream>
+	<fstream>
+	"BankApp.h"
+
+1710761630 d:\cdac\curriculum\2-practice\c++\20240318\16-filehandling\bankapp\bankapp\include\bankapp.h
+
+1710760616 source:d:\cdac\curriculum\2-practice\c++\20240318\16-filehandling\bankapp\bankapp\main.cpp
+	<iostream>
+	"BankApp.h"
+

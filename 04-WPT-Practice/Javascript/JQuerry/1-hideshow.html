@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide&Show</title>
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                if ($("p").is(":hidden")) {
+                    $("p").show(300);
+                    $("#btn").text("hide");
+                    document.getElementById("btn").value = "Hide";
+                }
+                else {
+                    $("p").hide(300);
+                    document.getElementById("btn").value = "Show";
+                }
+
+            });
+        });
+
+    </script>
+
+</head>
+
+<body>
+    <p>Hello</p>
+    <input type="button" id="btn" value="Hide"></input>
+</body>
+
+</html>

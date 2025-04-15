@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .wrapper {
+
+            border: 1px dashed black;
+            border-radius: 30px;
+            background-color: aliceblue;
+            display: flex;
+            justify-content: center;
+            margin: 60px auto;
+            width: 500px;
+            padding: 20px;
+        }
+
+        .centered {
+            text-align: center;
+        }
+
+        th {
+            font-size: x-large;
+            text-transform: uppercase;
+        }
+
+        table,
+        td,
+        tr {
+
+            padding: 3px;
+            margin: 1px;
+            height: 2rem;
+        }
+
+        tr input {
+            height: 2rem;
+            font-size: large;
+            text-align: center;
+        }
+
+        .btn {
+            margin-top: 3px;
+            width: 20%;
+            height: 2rem;
+            border-radius: 100%;
+            background-color: rgb(252, 144, 144);
+            font-size: x-large;
+        }
+
+        #result {
+            height: 100px;
+            text-align: center;
+            align-items: center;
+            font-size: xx-large;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <table>
+            <thead>
+                <th colspan="2"><u>Calulator</u></th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Enter First Number : </td>
+                    <td>
+                        <input type="number" name="num1" id="num1">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Enter Second Number : </td>
+                    <td>
+                        <input type="number" name="num2" id="num2">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="centered">
+                        <input type="button" class="btn" onclick="add()" value="+">
+                        <input type="button" class="btn" onclick="diff()" value="-">
+                        <input type="button" class="btn" onclick="prod()" value="x">
+                        <input type="button" class="btn" onclick="div()" value="/">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" id="result">result</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function getNum1() {
+            return document.getElementById('num1').value;
+        }
+
+        function getNum2() {
+            return document.getElementById('num2').value;
+        }
+
+
+        function add() {
+            let n1 = parseFloat(getNum1());
+            let n2 = parseFloat(getNum2());
+            document.getElementById('result').innerHTML = (n1 + n2);
+        }
+
+        function diff() {
+            let n1 = parseFloat(getNum1());
+            let n2 = parseFloat(getNum2());
+            document.getElementById('result').innerHTML = (n1 - n2);
+        }
+
+        function prod() {
+            let n1 = parseFloat(getNum1());
+            let n2 = parseFloat(getNum2());
+            document.getElementById('result').innerHTML = (n1 * n2);
+        }
+
+        function div() {
+            let n1 = parseFloat(getNum1());
+            let n2 = parseFloat(getNum2());
+            document.getElementById('result').innerHTML = (n1 / n2);
+        }
+    </script>
+</body>
+
+</html>

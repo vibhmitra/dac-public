@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Template</title>
+    <style>
+        #grid {
+            display: grid;
+            width: 100%;
+            grid-template-columns: 100px 1fr 2fr;
+        }
+
+        #block1 {
+            background-color: aquamarine;
+        }
+
+        #block2 {
+            background-color: rgb(211, 248, 236);
+        }
+
+        #block3 {
+            background-color: rgb(247, 231, 230);
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr 2fr;
+            /* grid-template-columns: repeat(4, auto); */
+            grid-gap: 5px;
+        }
+
+        .grid-container > div {
+            background-color: rgb(250, 235, 215, 0.4);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 23px;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="grid">
+        <div id="block1">Block 1</div>
+        <div id="block2">Block 2</div>
+        <div id="block3">Block 3</div>
+    </div>
+
+    <div class="grid-container">
+        <div class="box1">Box-1</div>
+        <div class="box2">Box-2</div>
+        <div class="box3">Box-3</div>
+        <div class="box4">Box-4</div>
+        <div class="box5">Box-6</div>
+        <div class="box6">Box-7</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create Product</h2>
+
+<form action="/Product/Create" method="post">
+    <div class="form-group">
+        <lablel>Product ID: </lablel>
+        <input class="form-control" id="textProductId" type="text" placeholder="Enter ID"/>
+    </div>
+    <div class="form-group">
+        <lablel>Product Name: </lablel>
+        <input class="form-control" id="textProductName" type="text" placeholder="Enter Name"/>
+    </div>
+    <div class="form-group">
+        <lablel>Product Rate: </lablel>
+        <input class="form-control" id="textProductRate" type="text" placeholder="Enter Rate" />
+    </div>
+
+    <button class="btn btn-primary" type="submit">Submit</button>
+</form>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // json object
+        let json = '{"name": "Vibh", "country": "India"}';
+
+        // converting json object to js object
+        let obj = JSON.parse(json);
+        document.write(obj.country + "<br>");
+
+        // converting js object to json
+        let json2 = JSON.stringify(obj);
+        document.write(json2);
+    </script>
+</body>
+
+</html>

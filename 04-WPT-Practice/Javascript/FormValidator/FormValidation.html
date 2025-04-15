@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <form name="myForm" onsubmit="return(validate());">
+        <table cellspacing="2" align="center" border="1" cellpadding="5">
+            <tr>
+                <td colspan="2">Registration Form</td>
+            </tr>
+            <tr>
+                <td>Username</td>
+                <td><input type="text" name="name" id="uname"></td>
+            </tr>
+
+            <tr>
+                <td>Email</td>
+                <td><input type="email" name="email" id="email"></td>
+            </tr>
+
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <input type="radio" name="gender" id="male" value="male">👨
+                    <input type="radio" name="gender" id="female" value="female">👧
+                </td>
+            </tr>
+
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="password" id="pwd"></td>
+            </tr>
+
+            <tr>
+                <td>Retype Password</td>
+                <td><input type="password" name="repassword" id="repwd"></td>
+            </tr>
+
+            <tr>
+                <td>Mobile Number</td>
+                <td><input type="number" name="mobile" id="mobile"></td>
+            </tr>
+
+            <tr>
+                <td>Zip Code</td>
+                <td><input type="text" name="zipcode" id="zipcode"></td>
+            </tr>
+
+            <tr>
+                <td>Select Country</td>
+                <td>
+                    <select name="usercountry" id="countryname">
+                        <option value="-1" selected>Choose Country...</option>
+                        <option value="1">India</option>
+                        <option value="2">US</option>
+                        <option value="2">UK</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr align="center">
+                <td colspan="2">
+                    <input type="checkbox" name="terms" id="" value="">I accept the <u>terms & condition.</u>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </td>
+            </tr>
+
+        </table>
+    </form>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

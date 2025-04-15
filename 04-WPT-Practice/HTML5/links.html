@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Links and Style</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box; /* Limits the conents inside a BOX */
+      }
+
+      ul {
+        margin-top: 40px;
+        background-color: rgb(196, 174, 127);
+        padding: 10px 10px;
+      }
+
+      ul li {
+        padding: 10px;
+        display: inline;
+        width: 100%;
+      }
+
+      a {
+        color: rgb(7, 7, 7);
+        /* text-decoration: none; */
+      }
+
+      a:link {
+        color: rgb(63, 56, 40);
+      }
+
+      a:hover {
+        padding-top: inherit;
+        padding-bottom: inherit;
+        background-color: rgb(250, 227, 173);
+      }
+
+      a:active {
+        font-weight: bold;
+        background-color: rgb(252, 237, 201);
+      }
+
+      a:visited {
+        color: rgb(42, 70, 73);
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li><a href="#" target="_blank">Site A</a></li>
+      <li><a href="#" target="_blank">Site B</a></li>
+      <li><a href="#" target="_blank">Site C</a></li>
+    </ul>
+  </body>
+</html>

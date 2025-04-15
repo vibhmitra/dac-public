@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+    <style>
+        * {
+            font-size: x-large;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="r1"></div>
+    <div id="r2"></div>
+    <div id="r3"></div>
+
+    <script>
+
+        let hello = () => {
+            document.getElementById("r1").innerHTML = "Hello User! (From No Parameter Arrow Function)";
+        }
+
+        let greet = name => {
+            document.getElementById("r2").innerHTML = `Hello ${name}! (From Single Parameter Arrow Function)`;
+        }
+
+        let sum = (a, b) => {
+            document.getElementById("r3").innerHTML = `Sum of ${a} & ${b} is ${a + b}! (From Multi Parameter Arrow Function)`;
+        }
+
+        hello();
+        greet(prompt("Enter your Name"));
+        sum(4, 5);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35004.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasicFileHandling", "BasicFileHandling\BasicFileHandling.csproj", "{2B84E155-7ED5-40C1-A024-C1FF30163024}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileProperties", "FileProperties\FileProperties.csproj", "{4194E324-9CBC-4B9E-9902-30C5FA1E4E5E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DirectoryExample", "DirectoryExample\DirectoryExample.csproj", "{8F5AAEBE-C395-4AC7-BFC2-3123B3BDA4ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileReadWriteOperation", "FileReadWriteOperation\FileReadWriteOperation.csproj", "{6B94505E-D365-4D6C-A002-C1E1CC8A27D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileReadWriteAllLines", "FileReadWriteAllLines\FileReadWriteAllLines.csproj", "{A06F1045-850B-4ED9-B846-2C56C8B796F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StreamWriterDemo", "StreamWriterDemo\StreamWriterDemo.csproj", "{3634EC16-BAF6-4A6F-83C9-1F929627D678}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2B84E155-7ED5-40C1-A024-C1FF30163024}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B84E155-7ED5-40C1-A024-C1FF30163024}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B84E155-7ED5-40C1-A024-C1FF30163024}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B84E155-7ED5-40C1-A024-C1FF30163024}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4194E324-9CBC-4B9E-9902-30C5FA1E4E5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4194E324-9CBC-4B9E-9902-30C5FA1E4E5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4194E324-9CBC-4B9E-9902-30C5FA1E4E5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4194E324-9CBC-4B9E-9902-30C5FA1E4E5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F5AAEBE-C395-4AC7-BFC2-3123B3BDA4ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F5AAEBE-C395-4AC7-BFC2-3123B3BDA4ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F5AAEBE-C395-4AC7-BFC2-3123B3BDA4ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F5AAEBE-C395-4AC7-BFC2-3123B3BDA4ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B94505E-D365-4D6C-A002-C1E1CC8A27D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B94505E-D365-4D6C-A002-C1E1CC8A27D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B94505E-D365-4D6C-A002-C1E1CC8A27D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B94505E-D365-4D6C-A002-C1E1CC8A27D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A06F1045-850B-4ED9-B846-2C56C8B796F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A06F1045-850B-4ED9-B846-2C56C8B796F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A06F1045-850B-4ED9-B846-2C56C8B796F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A06F1045-850B-4ED9-B846-2C56C8B796F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3634EC16-BAF6-4A6F-83C9-1F929627D678}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3634EC16-BAF6-4A6F-83C9-1F929627D678}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3634EC16-BAF6-4A6F-83C9-1F929627D678}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3634EC16-BAF6-4A6F-83C9-1F929627D678}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D869A6FD-C43D-4DD1-94BD-3019C7A60555}
+	EndGlobalSection
+EndGlobal

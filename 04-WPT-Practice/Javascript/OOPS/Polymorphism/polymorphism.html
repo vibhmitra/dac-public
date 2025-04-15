@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polymorphis</title>
+</head>
+
+<body>
+    <script>
+        const circle = {
+            radius: "5",
+            calculateArea: function () {
+                return Math.PI * this.radius * this.radius;
+            }
+        }
+
+        const square = {
+            side: "6",
+            calculateArea: function () {
+                return this.side * this.side;
+            }
+        }
+
+        function printArea(shape) {
+            document.write(`Area is : ${shape.calculateArea()}` + "<br>");
+        }
+
+        printArea(circle);  // print area of circle object
+        printArea(square);  // printarea of square obj
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    /* Descendant Selector: this will select all elements*/
+    div.lol p {
+        background-color: yellow;
+    }
+
+    /* CHild Selector: select only closest child member */
+    div.childSelect > p {
+        background-color: yellow;
+    }
+
+    /* Adjacent Sibling Selector */
+    div.adjSib + p {
+        background-color: thistle;
+    }
+
+    /* General Sibling */
+    div.genSib ~ p {
+        background-color: royalblue;
+    }
+
+    </style>
+</head>
+<body>
+    <!-- Descendant Selector  -->
+    <div class="lol">
+        <h4>Heading inside div lol Descendant Selector (div p)</h4>
+        <p>Paragraph 1 inside div lol</p>
+        <section><p>Paragraph 2 inside div lol inside section</p></section>
+        <p>Paragraph 3 inside div lol</p>
+    </div>
+    <p>Paragraph 3 outside div lol</p>
+    <p>Paragraph 4 outside div lol</p>
+
+    <hr>
+    <!-- Child Selector -->
+    <div class="childSelect">
+        <h4>Child Heading in Div Child Selector (div > p)</h4>
+        <p>Child Selector Paragraph 1</p>
+        <section><p>Child Selector Paragraph 2 inside section</p></section>
+        <p>Child Selector Paragraph 3</p>
+    </div>
+
+    <hr>
+
+    <!-- Adjacent Sibling -->
+    <div class="adjSib">
+        <h4>Adjacent Sibling Selector (div + p)</h4>
+        <p>p inside div</p>
+    </div>
+    <p>Adjacent p after div</p>
+    <p>p doesn't have effect</p>
+    
+    <hr>
+    <!-- General Sibling Selector -->
+    <div class="genSib">
+        <h4>General Sibling Selector (div ~ p)</h4>
+        <p>P inside div</p>
+    </div>
+    <p>P after div</p>
+    <p>Another P</p>
+</body>
+</html>

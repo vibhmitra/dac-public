@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bad Words</title>
+    <style>
+        .list-items {
+            display: inline-block;
+            margin: 0.5em 0.5em;
+            background-color: rgb(69, 255, 193);
+            width: auto;
+            padding: 10px;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            font-size: 1rem;
+            border: 1px dashed black;
+            border-radius: 30px;
+
+        }
+
+        input {
+
+            align-items: center;
+            padding: 0.5rem 2.4rem;
+            width: fit-content;
+            font-size: 1.5em;
+            box-sizing: border-box;
+            background-color: aquamarine;
+            border-radius: 30px;
+            position: relative;
+            text-align: center;
+            border: 2px solid rgb(0, 0, 0);
+            box-shadow: 0px 10px rgb(255, 130, 130);
+        }
+
+        input:focus {
+            box-shadow: 0px 5px rgb(255, 130, 130);
+            transform: translateY(3px);
+            transition: 0.2s;
+        }
+
+        .divCenter {
+            margin: 0.5em auto;
+            max-width: fit-content;
+            position: relative;
+        }
+
+        .brand {
+            font-size: 1.6em;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow';
+            text-decoration: overline;
+            padding-top: 0.5em;
+
+        }
+
+        .content {
+            max-width: fit-content;
+            margin: 0 auto;
+            padding: 0 3em;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .content a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .content a:hover {
+            text-decoration: underline;
+        }
+
+        .list-items:hover {
+            background-color: rgb(255, 111, 111);
+            box-shadow: 2px 4px 10px pink;
+            border-style: solid;
+            transform: translateY(-1px);
+            transition: 0.3s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="divCenter brand">
+        <h2>🥵 NSFW Auto 😂</h2>
+    </div>
+
+    <div class="divCenter">
+        <input type="search" name="name" autofocus="on" autocomplete="off" placeholder="Enter a Lewd Word 💦">
+    </div>
+
+    <div class="content">
+        <ul></ul>
+    </div>
+
+    <script src="./large.js"></script>
+    <script>
+        let input = document.querySelector('input');
+        input.addEventListener('keyup', function (event) {
+            let html = '';
+            if (input.value) {
+                for (word of badWords) {
+                    if (word.startsWith(input.value)) {
+                        html += `<div class="list-items"><a href="https://www.google.com/search?q=${word}">${word}</a></div>`;
+                    }
+                }
+            }
+            document.querySelector('ul').innerHTML = html;
+        });
+    </script>
+</body>
+
+</html>

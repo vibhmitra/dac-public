@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello</title>
+</head>
+
+<body>
+    <form>
+        <input type="text" name="name" autofocus="on" id="name">
+        <input type="submit">
+    </form>
+
+    <script>
+        // Listen form for Submit Event , Alert 
+        document.querySelector('form').addEventListener('submit',
+            // Annonymous function
+            function (event) {
+                alert('hello, ' + document.querySelector('#name').value);
+            }
+        );
+    </script>
+</body>
+
+</html>

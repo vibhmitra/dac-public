@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1710226042 source:g:\20240312\employeeproject\main.cpp
+	<iostream>
+	"Rectangle.h"
+
+1710226124 source:g:\20240312\employeeproject\src\rectangle.cpp
+	<iostream>
+	"Rectangle.h"
+
+1710226000 g:\20240312\employeeproject\include\rectangle.h
+

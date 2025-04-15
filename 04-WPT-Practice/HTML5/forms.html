@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    
+<form accept-charset="UTF-8" action="action_page.php" autocomplete="off" method="GET" target="_blank">
+	<fieldset>
+	    <legend>Fieldset Legend</legend>
+	    <label for="name">Name</label>
+	    <input name="name" type="text" placeholder="Enter Your Name Here" required /> <br/>
+        
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="vibhanshu@example.com"></br>
+        
+	    <input checked="checked" name="sex" type="radio" value="male" /> Male <br/> 
+	    <input name="sex" type="radio" value="female" /> Female <br/>  
+	    
+        <textarea cols="30" rows="2" placeholder="Long Text" name="feedback" width="fixed"></textarea><br /> 
+	    
+        <select>
+		    <option selected="selected" value="1">Yes</option>
+		    <option value="2">No</option>
+	    </select><br/> 
+	    <input name="democheckbox" type="checkbox" value="1" /> Checkbox<br /> 
+
+        <label for="color">Color</label>
+        <input type="color" name="color"></br>
+
+        <label for="file-select">Upload File</label>
+        <input type="file" name="file-select"></br>
+
+        <label for="rangeSel">Range Selector</label>
+        <input name="rangeSel" type="range" step="2" max="10" min="-10"></br>
+
+        <label for="numSelector">Number Select</label>
+        <input type="number" name="numSelector">
+	    <button type="submit" value="Submit">Submit</button>
+        <button type="reset" value="Reset">Reset</button>
+	</fieldset>
+</form>
+</body>
+</html>

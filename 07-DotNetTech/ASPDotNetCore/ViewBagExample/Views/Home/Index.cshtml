@@ -1,0 +1,33 @@
+﻿@using ViewBagExample.Models
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>@ViewData["title"]</title>
+    <link href="~/lib/twitter-bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Person Details</h1>
+
+        @foreach (Person item in ViewBag.PersonList)
+        {
+            <div>
+                <h3>@item.Name</h3>
+                <table class="table table-striped">
+                    <tbody>
+                        <tr>
+                            <td>Gender</td>
+                            <td>@item.PersonGender</td>
+                        </tr>
+                        <tr>
+                            <td>DOB</td>
+                            <td>@item.DOB.Value.ToString("MM/dd/yyyy")</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        }
+    </div>
+</body>
+</html>

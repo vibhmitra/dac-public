@@ -1,0 +1,45 @@
+﻿
+@model Product
+@{
+    ViewData["Title"] = "AddProduct";
+}
+
+<form method="post" class="col-form-label">
+    <div class="border p-3 mb-4 shadow">
+        <div action="row pb-2">
+            <h2 class="text-primary">Add Product</h2>
+            <hr />
+        </div>
+        
+        <!-- Server Side Validation Summary-->
+        <div>
+            <div asp-validation-summary="All" class="text-bg-danger"></div>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="ProductName">Product Name</label>
+            <input asp-for="ProductName" class="form-control" />
+            <span asp-validation-for="ProductName" class="text-danger"></span> <!-- Server Side Validation-->
+        </div>
+        <div class="mb-3">
+            <label asp-for="Price">Price</label>
+            <input asp-for="Price" class="form-control" />
+            <span asp-validation-for="Price" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Quantity">Quantity</label>
+            <input asp-for="Quantity" class="form-control" />
+            <span asp-validation-for="Quantity" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <button class="btn btn-primary" type="submit"><span class="fa fa-solid fa-plus"></span> Add</button>
+            <a asp-controller="Product" asp-action="Index" class="btn btn-warning"><span class="fa fa-solid fa-ban"></span> Cancel</a>
+        </div>
+    </div>
+</form>
+
+@* Client Side Validation | Benifit : No Page Refresh + Jaise Hi Text Enter Hoga Error Hatt Jayega *@
+@section Scripts {
+    <partial name="_ValidationScriptsPartial"></partial>
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types</title>
+</head>
+
+<body>
+
+    <button type="button" onclick="showDataTypes()">ShowDataTypes()</button>
+    <ul id="myList">
+    </ul>
+
+    <script>
+
+        function showDataTypes() {
+            document.getElementById('myList').innerHTML = (
+                `   <li>Divide by 0 : ${"mem" / 0} </li>
+                    <li>Math.sqrt(4) : ${Math.sqrt(4)} </li>
+                    <li>Integer : ${4} </li>
+                    <li>Float : ${4.63} </li>
+                    <li>String : ${"I am Groot!"} </li>
+                    <li>typeof(3) : ${typeof (3)} </li>     `
+            );
+        }
+    </script>
+</body>
+
+</html>

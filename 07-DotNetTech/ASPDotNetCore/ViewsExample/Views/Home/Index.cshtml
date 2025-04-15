@@ -1,0 +1,37 @@
+﻿@using ViewsExample.Models
+
+@{
+    string title = "ASP.Net Views Example";
+    // Person person = new Person()
+    //         {
+    //             Name = "John",
+    //             DOB = Convert.ToDateTime("2002-10-12")
+    //         };
+            
+    Person person = new() { Name = "John", DOB = null };
+}
+
+<html>
+    <head>
+        <title>@title</title>
+        <meta charset="utf-8" />
+        </head>
+        <body>
+            <h1>Welcome to Our Website</h1>
+            <h2>Hello, @person.Name !</h2>
+  @* @{
+       double age = Math.Round((DateTime.Now - person.DOB).TotalDays / 365.25);
+   } *@
+
+   @if(person.DOB.HasValue)
+    {
+        double age = Math.Round((DateTime.Now - person.DOB).Value.TotalDays / 365.25);
+        <h3>You Are @age Years Old. </h3>
+    }
+    else
+    {
+        <h3>Date of Birth is Not In Record</h3>
+    }
+ @* <h3>you are @age year old.</h3> *@
+        </body>
+</html>

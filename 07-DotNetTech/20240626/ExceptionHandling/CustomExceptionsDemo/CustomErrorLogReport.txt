@@ -1,0 +1,20 @@
+:::::: LOG GENERATED ::::::
+
+System Time : 2024-06-28 20:18:05
+Exception Type : System.InvalidOperationException
+
+Stack Traces :    at CustomExceptionsDemo.FundsTransfer.MoneyTransfer(BankAccount sourceAccount, BankAccount destinationAccount, Double Amount) in C:\Users\VIBH\Desktop\Courses\CoursesData\CDAC\Curriculum\2-Practice\Github\dac\DotNetTech\20240626\ExceptionHandling\CustomExceptionsDemo\CustomExceptionDemo.cs:line 43
+   at CustomExceptionsDemo.CustomExceptionDemo.Main(String[] args) in C:\Users\VIBH\Desktop\Courses\CoursesData\CDAC\Curriculum\2-Practice\Github\dac\DotNetTech\20240626\ExceptionHandling\CustomExceptionsDemo\CustomExceptionDemo.cs:line 91
+
+Message : Insufficient Funds in the Source Account, The Current Balance : 5000 but you are trying to transfer 10000
+
+:::::: LOG GENERATED ::::::
+
+System Time : 2024-06-28 20:18:08
+Exception Type : System.InvalidOperationException
+
+Stack Traces :    at CustomExceptionsDemo.FundsTransfer.MoneyTransfer(BankAccount sourceAccount, BankAccount destinationAccount, Double Amount) in C:\Users\VIBH\Desktop\Courses\CoursesData\CDAC\Curriculum\2-Practice\Github\dac\DotNetTech\20240626\ExceptionHandling\CustomExceptionsDemo\CustomExceptionDemo.cs:line 43
+   at CustomExceptionsDemo.CustomExceptionDemo.Main(String[] args) in C:\Users\VIBH\Desktop\Courses\CoursesData\CDAC\Curriculum\2-Practice\Github\dac\DotNetTech\20240626\ExceptionHandling\CustomExceptionsDemo\CustomExceptionDemo.cs:line 91
+
+Message : Insufficient Funds in the Source Account, The Current Balance : 5000 but you are trying to transfer 10000
+

@@ -1,0 +1,47 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>LoginServlet</servlet-name>
+  	<display-name>LoginServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.cdac.session.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Inbox</servlet-name>
+  	<display-name>Inbox</display-name>
+  	<description></description>
+  	<servlet-class>com.cdac.session.Inbox</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>SendItems</servlet-name>
+  	<display-name>SendItems</display-name>
+  	<description></description>
+  	<servlet-class>com.cdac.session.SendItems</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Logout</servlet-name>
+  	<display-name>Logout</display-name>
+  	<description></description>
+  	<servlet-class>com.cdac.session.Logout</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>LoginServlet</servlet-name>
+  	<url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Inbox</servlet-name>
+  	<url-pattern>/Inbox</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SendItems</servlet-name>
+  	<url-pattern>/SendItems</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Logout</servlet-name>
+  	<url-pattern>/Logout</url-pattern>
+  </servlet-mapping>
+</web-app>

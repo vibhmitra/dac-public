@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    
+    <!-- Basic Setter / Property Injection -->
+    <bean id="a1" class="com.cdac.setter_inj.Address">
+    	<property name="city" value="Naver City"></property>
+    	<property name="state" value="Naver State"></property>
+    	<property name="country" value="Naver Country"></property>
+    </bean>
+    
+     <bean id="a2" class="com.cdac.setter_inj.Address">
+    	<property name="city" value="Pika City"></property>
+    	<property name="state" value="Pika State"></property>
+    	<property name="country" value="Pika Country"></property>
+    </bean>
+    
+    <!-- Basic Setter / Property Injection with Object Injection -->
+    <bean id="e1" class="com.cdac.setter_inj.Employee">
+    	<property name="id" value="101"></property>
+    	<property name="name" value="Vibh of Naver"></property>
+    	<property name="address" ref="a1"></property>
+    </bean>
+    
+     <bean id="e2" class="com.cdac.setter_inj.Employee">
+    	<property name="id" value="102"></property>
+    	<property name="name" value="Maz of Pika"></property>
+    	<property name="address" ref="a2"></property>
+    </bean>
+</beans>

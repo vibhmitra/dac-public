@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+
+    <button type="button" id="btn" onclick="changebgByDom(); changeParaById();">🧹</button>
+
+    <p id="mark">Paragraph 1</p>
+
+    <button type="button" onclick="getElementByClass()">Get Class Element()</button>
+    <p class="test">Paragraph 2 (Class "test")</p>
+    <div class="myDiv test">Some Div (Class "test")</div>
+
+    <ul id="whichClass"></ul>
+
+    <script>
+        function changebgByDom() {
+            if (document.body.style.backgroundColor == "white") {
+                document.body.style.backgroundColor = "#ffff52";
+            }
+            else {
+                document.body.style.backgroundColor = "white";
+            }
+        }
+
+        function changeParaById() {
+            document.getElementById("mark").style.background = "red";
+            var m = document.getElementById("mark");
+            m.style.background = "#a4eba4";
+        }
+
+        function getElementByClass() {
+            document.getElementById('whichClass').innerHTML = document.getElementsByClassName("test")[0];
+            document.getElementById('whichClass').outerHTML = document.getElementsByClassName("test")[1];
+        }
+
+    </script>
+</body>
+
+</html>

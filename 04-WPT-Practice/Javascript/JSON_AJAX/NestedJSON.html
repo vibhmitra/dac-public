@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested JSON</title>
+</head>
+
+<body>
+    <script>
+        let jsondata = `{
+            "book": {
+                    "name": "Harry Potter and the Goblet of Fire",
+                    "author": "J. K. Rowling",
+                    "year": 2000,
+                    "characters": ["Harry Potter", "Hermione Granger", "Ron Weasley"],
+                    "genre": "Fantasy Fiction",
+                    "price": {
+                            "paperback": "$10.40", "hardcover": "$20.32", "kindle": "$4.11"
+                    }
+            }
+        }`;
+
+        // Step 1 : convert JSON Object into JS Obj
+        let obj = JSON.parse(jsondata);
+
+        function printJsonData(obj) {
+            for (let key in obj) {
+                if (obj[key] instanceof Object) {
+                    printJsonData(obj[key]); // recursive call
+                } else {
+                    document.write(obj[key] + "<br>");
+                }
+            }
+        }
+
+        // printing all values
+        printJsonData(obj);
+        document.write("<hr>");
+
+        document.write(obj["book"]["author"] + "<br>");
+        document.write(obj["book"]["characters"][1] + "<br>");          // printing values array
+        document.write(obj["book"]["price"]["hardcover"] + "<br>");
+
+        let price = obj["book"]["price"];
+        document.write(price[printJsonData(obj["book"])]);
+
+    </script>
+</body>
+
+</html>

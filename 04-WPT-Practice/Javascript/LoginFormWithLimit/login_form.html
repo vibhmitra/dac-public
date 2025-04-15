@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoginForm</title>
+    <link rel="stylesheet" href="./login_form.css">
+</head>
+
+<body>
+    <div class="main">
+        <h1>Login Form with Limits</h1>
+        <h3>Enter your login credentials</h3>
+        <form name="loginForm">
+            <label for="uname">
+                Username:
+            </label>
+            <input type="text" id="uname" name="uname" placeholder="Enter your Username" required autocomplete="off">
+
+            <label for="password">
+                Password:
+            </label>
+            <input type="password" id="password" name="password" placeholder="Enter your Password" required
+                autocomplete="off">
+
+            <div class="wrap">
+                <input type="button" value="SUBMIT" id="submit" onclick="authenticate()">
+            </div>
+        </form>
+        <p id="info">Not registered?
+            <a href="#" style="text-decoration: none;">
+                Create an account
+            </a>
+        </p>
+    </div>
+
+
+    <script>
+        let attempts = 3;
+        function authenticate() {
+            let username = document.loginForm.uname.value;
+            let pwd = document.loginForm.password.value;
+
+            if (username == "admin" && pwd == "root") {
+                alert("Press Okay to Continue...");
+                window.location = "./welcome.html";
+                return false;
+            }
+            else {
+                attempts--;
+                if (attempts > 0) {
+                    alert("Wrong Data, Your Have " + attempts + " Attemps Left.");
+                }
+                if (attempts == 0) {
+                    alert("Too Many Attemts");
+                    document.getElementById("uname").disabled = true;
+                    document.getElementById("password").disabled = true;
+                    document.getElementById("submit").disabled = true;
+                    document.getElementById("submit").style.backgroundColor = "grey";
+                    document.getElementById("submit").style.cursor = "not-allowed";
+                    document.getElementById("info").innerHTML = "Form Disabled (Reason : Too Many Attempts)";
+                    return false;
+                }
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

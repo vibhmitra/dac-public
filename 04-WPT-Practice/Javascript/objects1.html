@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <button type="button" onclick="alert(person.displayName())">person.displayName()</button>
+
+    <script>
+        var person = {
+            "name": "Carl",
+            "displayName": function () {
+                alert(this.name);
+            }
+        };
+
+        person.country = "US";              // adding new Keys
+        person["email"] = "cal@pm.me"       // adding new keys
+        person.name = "Vibh";
+
+        delete person.email;                // deleting the key
+
+        for (var prop in person) {
+            document.write('<p>' + prop + " :  " + person[prop] + '</p>');
+        }
+    </script>
+</body>
+
+</html>

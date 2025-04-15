@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists</title>
+    <style>
+    ol.listOne {
+        list-style-type: square;
+        list-style-image: url(https://www.gstatic.com/lamda/images/gemini_sparkle_v002_d4735304ff6292a690345.svg);    
+        list-style-position: outside;
+    }
+
+    ul.listTwo {
+        list-style-type: upper-roman;
+        list-style-position: inside;
+        color: red;
+    }
+
+    </style>
+    
+</head>
+<body>
+    <h3>List in HTML</h3>
+    <hr>
+    
+    <h3>Ordered List (Artist Name):</h3>
+    <ol>
+        <li>Aurora Aksnes</li>
+        <li>Kygo</li>
+        <ol>
+            <li>Keyboard</li>
+            <li>Electronic</li>
+            <li>Trance</li>
+        </ol>
+        <li>Martin Garrix</li>
+        <li>Mike Shinoda</li>
+    </ol>
+
+    <h3>Unordered List (Artist Name): </h3>
+    <ul>
+        <li>Aurora Aksnes</li>
+        <ul> 
+            <li>Vocals</li>
+            <li>Harp</li>
+            <li>Keyboard</li>
+        </ul>
+        <li>Kygo</li>
+        <li>Martin Garix</li>
+        <li>Mike Shinoda</li>
+    </ul>
+
+    <hr>
+
+    <h3>Description List (Artist Name): </h3>
+    <dl>
+        <dt>Aurora Aksnes</dt>
+        <dd>Artist from Norway. Famous for "Runaway" song.</dd>
+    </dl>
+
+    <hr>
+
+    <h3>List Styling</h3>
+    <ol class="listOne">
+        <li>Aurora Aksnes</li>
+        <li>Kygo</li>
+        <li>Martin Garrix</li>
+        <li>Mike Shinoda</li>
+    </ol>
+    <ul class="listTwo">
+        <li>Aurora Aksnes</li>
+        <li>Kygo</li>
+        <li>Martin Garrix</li>
+        <li>Mike Shinoda</li>
+    </ul>
+</body>
+</html>
